@@ -1,0 +1,200 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100px;
+    background-color: aqua;
+}
+
+nav {
+    overflow: hidden;
+    width: 100%;
+    background: linear-gradient(to right, #ffff, #02aff4);
+    position: fixed;
+    top: 0;
+    height: 60px;
+    display: flex;
+    justify-content: space-around;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+}
+
+nav .logo {
+    font-size: 1.rem;
+    width: 40%;
+    left: -35px;
+    position: relative;
+    top: -18px;
+}
+
+nav .logo img {
+    padding: 20px;
+    width: 60px;
+}
+
+nav li {
+    display: inline;
+}
+
+nav a {
+    text-decoration: none;
+    color: rgba(78, 71, 71, );
+    font-family: arial;
+    padding: 0px 10px;
+    font-weight: bold;
+    transition: 0.15s;
+    color: white;
+}
+
+nav a:hover {
+    color: rgb(11, 0, 130);
+    transition: .4s ease-in-out;
+}
+
+#nav-button {
+    display: none;
+}
+
+label {
+    display: none;
+}
+
+@media only screen and (max-width: 736px) and (orientation:potrait) {
+
+    nav {
+        align-items: center;
+    }
+
+    nav .logo {
+        width: 40%;
+        position: absolute;
+        left: 0px;
+
+    }
+
+    nav .logo img {
+        padding-top: 20%;
+    }
+
+    nav ul {
+        position: fixed;
+        top: 44px;
+        width: 100%;
+        background: #ff0000;
+        max-height: 0;
+       overflow: hidden;
+
+    }
+
+    nav li {
+        display: block;
+        width: 100%;
+        padding: 10px;
+    }
+
+    nav a {
+        width: 100%;
+        display: block;
+    }
+
+    nav li:hover {
+        background: darkred;
+    }
+
+    label {
+        display: block;
+        padding: 0px 10px;
+        font-size: 30px;
+        cursor: pointer;  
+        position: absolute;
+        right: 2%;
+    }
+
+    label:hover {
+        color: white;
+    }
+
+    nav #nav-button:checked~ul {
+        max-height: 100%;
+    }
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.slider {
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+}
+
+figure {
+    position: center;
+    left: 0;
+    width: 200%;
+    animation: 2s slide infinite;
+}
+
+.slide {
+    position: relative;
+    width: 25%;
+    float: left;
+}
+.slide h1 {
+    position: relative;
+    font-size: 3em;
+    width: 100%;
+    text-align: center;
+    margin-top: 50px;
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.slide img {
+    width: 100%;
+    height: 500px;
+}
+
+@keyframes slide{
+    0%{
+        left: 0;
+    }
+    10%{
+        left: 0;
+    }
+    20%{
+        left: -100%;
+    }
+    30%{
+        left: -100%;
+    }
+    40%{
+        left: -200%;
+    }
+    50%{
+        left: -200%;
+    }
+    55%{
+        left: -300%;
+    }
+    65%{
+        left: -300%;
+    }
+    66%{
+        left: -200%;
+    }
+    74%{
+        left: -200%;
+    }
+    75%{
+        left: -100%;
+    }
+    85%{
+        left: -100%;
+    }
+    90%{
+        left: 0;
+    }
+    100%{
+        left: 0;
+    }
+}
